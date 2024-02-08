@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>טופס אירועי יומולדת</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.5.3/signature_pad.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <h2 style="text-align: center;">כמות משתתפים ביום הולדת בטכנודע חדרה</h2>
+    <form id="eventForm">
+        <div class="form-group">
+            <p>הורים יקרים, אנו מבקשים מכם לחתום על טופס זה בכדי להבטיח ספירה מדויקת של הילדים המשתתפים במסיבת יום ההולדת ובכדי למנוע אי התאמות.</p>
+
+        </div>
+        <div class="form-group">
+            <label for="fullName">שם מלא של אחד ההורים:</label>
+            <input type="text" id="fullName" name="fullName" required>
+        </div>
+        <div class="form-group">
+            <label for="emailAddress">דוא"ל:</label>
+            <input type="email" id="emailAddress" name="emailAddress" required>
+        </div>
+        <div class="form-group">
+            <label for="numParticipants">מספר משתתפים (לא כולל חוגג/י היום הולדת):</label>
+            <input type="number" id="numParticipants" name="numParticipants" required>
+        </div>
+
+        <div class="form-group">
+            <label for="eventDate">תאריך האירוע:</label>
+            <input type="date" id="eventDate" name="eventDate" required>
+        </div>
+
+        <!-- Added Hebrew text after the subject -->
+
+
+        <div class="form-group signature-container">
+            <label class="signature-label" for="signature-pad">חתימה:</label>
+            <canvas id="signature-pad" class="signature-pad" width="400" height="200"></canvas>
+
+            <button type="button" class="clear-signature" onclick="signaturePad.clear()">נקה/י חתימה</button>
+        </div>
+
+        <!-- Added another Hebrew text below the signature -->
+        <div class="form-group">
+            <p>בחתימתי אני מאשר/ת שזוהי כמות המשתתפים והעלות הסופית של מסיבת יום ההולדת תחושב ע"פ מספר זה</p>
+        </div>
+
+        <input type="submit" value="שלח/י">
+    </form>
+</div>
+<script type="text/javascript"
+src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
