@@ -29,8 +29,9 @@ document.getElementById("eventForm").addEventListener("submit", function(event) 
     };
 
     // Assuming you're sending data to your server or an API endpoint
-    fetch('https://cors-proxy.htmldriven.com/?url=https://hooks.zapier.com/hooks/catch/14328377/3l18p7q/', {
+    fetch('https://hooks.zapier.com/hooks/catch/14328377/3l18p7q/', {
         method: 'POST',
+        mode: 'no-cors',
         headers: {
             'Content-Type': 'application/json',
             // Any additional headers
