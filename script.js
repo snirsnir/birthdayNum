@@ -29,14 +29,14 @@ document.getElementById("eventForm").addEventListener("submit", function(event) 
     };
 
     // Assuming you're sending data to your server or an API endpoint
-    fetch(`https://crossorigin.me/https://hooks.zapier.com/hooks/catch/14328377/3l18p7q/')}), {
+    fetch('https://crossorigin.me/https://hooks.zapier.com/hooks/catch/14328377/3l18p7q/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
             // Any additional headers
         },
         body: JSON.stringify(formData),
-    }
+    })
     .then(response => response.json())
     .then(data => {
         console.log('Success:', data);
